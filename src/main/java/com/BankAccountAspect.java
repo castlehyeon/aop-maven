@@ -2,6 +2,7 @@ package com;
 
 import org.aopalliance.aop.Advice;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -22,6 +23,8 @@ public class BankAccountAspect implements Advice{
 
         // Method Information
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        //위의 코드는 아래와 같다.
+//        Signature s = joinPoint.getSignature();
 
         System.out.println("full method description: " + signature.getMethod());
         System.out.println("method name: " + signature.getMethod().getName());

@@ -15,7 +15,7 @@
 <!--    <bean id="bankAccountAspect" class="com.BankAccountAspect" />-->
 
     <aop:config>
-        <aop:aspect id="bankAccountAspect" ref="bankAccountAspect">
+        <aop:aspect id="bankAccountAspect" ref="BankAccountAspect">
             <aop:before method="getAccountOperationInfo" pointcut="@annotation(com.AccountOperation)"/>
         </aop:aspect>
     </aop:config>
